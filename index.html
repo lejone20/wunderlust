@@ -9,13 +9,17 @@
     <h1>Wunderlust Travel</h1>
 (logo.png)
     <h2>Let Wunderlust Travel help you plan the trip of your dreams!</h2>
+
+    <nav>
+          <ul>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#inspirations">Inspirations</a></li>
+            <li><a href="#special">Special</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+      </nav>
 </header>
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-Destinations
-Inspirations
-Special
-Contact Us
 
 Majorca
 Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage, rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma, are overflowing with character, while its beaches are famous all around the world, making it one of the most sought-after summer destinations.
@@ -150,14 +154,44 @@ Population
 Population: 923,608
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
+        <section id="contact">
+          <form>
+            <label for = "fname">First Name*</label> 
+            <input type="text" id="fname" required placeholder = "Please enter first name">
+            
+            <label for = "lname">Last Name*</label> 
+            <input type="text" id="lname" required placeholder = "Please enter last name"> 
 
-Contact Us
-First Name (Enter first name)
-Last Name (Enter last name)
+            <fieldset>
 
-Contact Method (Email, Text, Phone)
-Email Address (Enter Email)
-Phone Number (Enter telephone number)
+              <legend>Please select email or phone as your preferred method of contact</legend>
+
+              <input type="radio" name="pref-contact" id="email-pref" checked>
+              <label for="email-pref">Email</label>
+
+              <input type="radio" name="pref-contact" id="text-pref">
+              <label for="text-pref">Text</label>
+
+              <input type="radio" name="pref-contact" id="phone-pref">
+              <label for="phone-pref">Phone</label>
+
+            </fieldset>
+            
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email" required placeholder="Please enter a valid email address">
+
+            <label for="phone">Phone*</label>
+            <input type="tel" name="phone"  id="phone" required placeholder="Please enter your phone number">
+
+          </form>
+
+        </section>
+
+
+
+
+
+
 
 Destination (Barcelona, Granada, Ibiza, Madrid, Majorca, Seville, Tenerife, Valencia)
 Travel Time (Fall, Winter, Spring, Summer, Flexible)
