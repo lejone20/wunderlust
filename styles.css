@@ -48,16 +48,27 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-:root{
-	--dk-gray: #222;
-    --light-blue: #4288ba;
-	--dark-pink: #a00655;
-	--lt-teal: #2baab8;
-    --teal: #135d65;
-    --yellow: #e7ca23;
-	--blue: #5994eb;
-	--white: #fff;
 
+
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+	--dk-gray: #222222;
+	--purple-: #9B26B0;
+	--lt-teal: #2baab8;
+    --teal: #1#55BCD5;
+    --yellow: #F6D64A;
+	--blue: #499BD2;
+	--lt-gray: #EAEAEA;
+	--white: #FFFFFF;
+	--black: #000000;
+
+	--fonts: Molle, Montserrat, Arial;
+
+}
+body{
+	min-width: 320px;
+	
 }
 #skip {
   position: absolute;
@@ -74,5 +85,166 @@ table {
   height: auto;
 }
 body{
-	display: grid;
+	display: block;
 }
+h1, h2, h3 {
+	font-family: Molle;
+}
+h4, p, q, small, nav, button, form{
+	font-family: Montserrat;
+}
+header{
+	background: linear-gradient(to bottom, #2baab8, #ffffff);
+
+}
+.sr-only {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+h1 {
+	font-size: 72px;
+	padding-top: 25px;
+}
+h2 {
+	font-size: 60px;
+	padding-top: 25px;
+}
+header p{
+	font-size: 30px;
+	max-width: 500px;
+	line-height: 1.5;
+}
+header{
+	padding-left: 40px;
+	margin: 0 auto;
+}
+#intro{
+	padding-left: 40px;
+	margin: 0 auto;
+}
+#intro p{
+	font-size: 24px;
+	max-width: 530px;
+	line-height: 1.75;
+}
+#plan{
+	background-color: var(--yellow);
+	padding: 35px;
+	text-align: center;
+	font-size: 48px;
+
+}
+#plan section{
+	background-color: var(--lt-teal);
+	border: solid 5px var(--white);
+	border-radius: 15px;
+	width: 400px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 20px;
+	align-items: center;
+	
+
+}
+#plan img{
+	padding: 20px;
+}
+
+#plan h3{
+	padding-bottom: 20px;
+	
+}
+#plan h4{
+	text-transform: uppercase;
+	font-family:  Montserrat;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+}
+#testimonials{
+	padding: 20px;
+	text-align: center;
+	font-size: 60px;
+	
+}
+#testimonials h4{
+	font-weight: bold;
+	font-size: 40px;
+	text-transform: uppercase;
+	padding: 15px;
+}
+#testimonials p{
+	font-size: 28px;
+	
+}
+
+q {
+  quotes: "“" "”";         
+  line-height: 1.25;          
+  display: block;           
+  margin: 0 auto;   
+  font-size: 24px;	
+  max-width: 380px;
+
+}
+
+q::before {
+  content: open-quote;
+}
+
+q::after {
+  content: close-quote;
+}
+#about{
+	background-color: #499BD2;
+}
+#about div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+#about div section {
+  flex: 1 1 45%; 
+  max-width: 45%; 
+  box-sizing: border-box;
+  padding: 20px;
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+  
+}
+#about h4{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 30px;
+	padding: 15px;
+}
+h3{
+	font-size: 60px;
+	padding: 40px;
+}
+#about p{
+	font-size: 30px;
+}
+h3 span{
+	font-family: Montserrant;
+	font-size: 36px;
+	
+
+}
+label{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 30px;
+}
+label span{
+	color: var(--purple-);
+}
+
+

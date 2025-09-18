@@ -42,18 +42,23 @@
             <nav>
                 <div id="menu-toggle">
                     <!-- responsive menu code from (with changes made to match mockups): https://css-tricks.com/three-css-alternatives-to-javascript-navigation/ -->
+                    <div id="nav-container"></div>
                     <h2 class="sr-only">Main Navigation</h2>
                     <!-- hidden but accessible headings from: https://webaim.org/techniques/css/invisiblecontent/ -->
                     <input name="toggle" id="toggle" type="checkbox">
-                    <label for="toggle">Menu</label>
-                    <ul>
-                        <li class="active"><a href="#">Destinations</a></li>
-                        <li><a href="#testimonials">Inspirations</a></li>
-                        <li><a href="#plan">Special</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
+                    <label for="toggle" onclick="loadNav()">Menu</label>
                 </div>
             </nav>
+                <script>
+                    function loadNav() {
+                        fetch('nav.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('nav-container').innerHTML = data;
+                        })
+                        .catch(error => console.error('Navigation load failed:', error));
+                }
+                </script>
         </header>
         <main id="main-content">
             <article>
@@ -61,7 +66,7 @@
                     <h2>Majorca</h2>
                     <p>Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage, rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma, are overflowing with character, while its beaches are famous all around the world, making it one of the most sought-after summer destinations.</p>
                     <div id="img-grid">
-                        <img src="images/majorca-waves.png"Turquoise blue waters with white wave caps crashing against a rock cliff">
+                        <img src="images/majorca-waves.png" alt="Turquoise blue waters with white wave caps crashing against a rock cliff">
                         <img src="images/majorca-beach.png" alt="A calm cove with turquoise waters calmly lapping at a light sand beach">
                         <picture>
                             <source srcset="images/majorca-cove-small.png"
