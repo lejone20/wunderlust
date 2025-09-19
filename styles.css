@@ -97,26 +97,93 @@ header{
 	background: linear-gradient(to bottom, #2baab8, #ffffff);
 
 }
+
+
+/* Hide screen-reader-only heading */
 .sr-only {
-position:absolute;
-left:-10000px;
-top:auto;
-width:1px;
-height:1px;
-overflow:hidden;
+  position: absolute;
+  left: -9999px;
 }
-h1 {
-	font-size: 72px;
-	padding-top: 25px;
+#menu-toggle {
+  background-color: transparent;
+  text-align: center;
+  margin-top: 20px;
 }
+
+#menu-toggle label {
+  background-color: var(--yellow);
+  color: var(--black);
+  font-size: 20px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.menu {
+  list-style: none;
+  display: block;
+  text-align: center;
+}
+#navpage p{
+	background-color: var(--black);
+	color: var(--white);
+	text-align: center;
+	height: 40px;
+	padding-top: 15px;
+	font-size: 18px;
+	
+}
+.menu li a{
+	background-color: var(--lt-teal);
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	color: var(--black);
+	height: 40px;
+	width: 100%;
+	border-bottom: solid 2px var(--black);
+}
+
+.menu li a:hover {
+  background-color: var(--yellow);
+}
+
+
+/*hide checkbox*/
+#toggle {
+  display: none;
+}
+
+header {
+  background: linear-gradient(to bottom, #2baab8, #ffffff);
+  padding: 40px;
+  text-align: center;
+}
+
+#logo img {
+  max-width: 120px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 72px;
+  margin: 0;
+}
+
+header p {
+  font-size: 24px;
+  max-width: 600px;
+  margin: 10px auto;
+  line-height: 1.5;
+}
+
+
 h2 {
 	font-size: 60px;
 	padding-top: 25px;
-}
-header p{
-	font-size: 30px;
-	max-width: 500px;
-	line-height: 1.5;
 }
 header{
 	padding-left: 40px;
@@ -236,12 +303,15 @@ h3 span{
 	font-family: Montserrant;
 	font-size: 36px;
 	
-
+#contact {
+	display: inline-block;
+	margin-left: 40px;
+}
 }
 label, legend{
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 18px;
 }
 .required, .radio-input{
 	color: var(--purple-);
@@ -251,35 +321,9 @@ input{
 	font-size: 16px;
 	border-radius: 4px;
 	border: solid 2px var(--purple-);
-	width: 250px;
+	width: 300px;
 }
 
-.radio-control {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--purple-); 
-  border-radius: 50%;
-  background-color: white;
-  position: relative;
-}
-
-
-input[type="radio"]:checked + .radio-control::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 10px;
-  height: 10px;
-  background-color: var(--purple-); 
-  border-radius: 50%;
-}
-.radio-input input[type="radio"] {
-  opacity: 0;
-  position: absolute;
-  left: -9999px;
-}
 
 .custom-select select {
   border: 2px solid var(--purple-); 
@@ -289,6 +333,93 @@ input[type="radio"]:checked + .radio-control::after {
   background-color: var(--white);    
   color: var(--black);            
 }
-label{
-	line-height: 2;
+
+/* Hide native radio input */
+.radio-input input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Style the visible custom radio circle */
+.radio-control {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--purple-); /* Purple border */
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Inner dot when selected */
+.radio-input input[type="radio"]:checked + .radio-control::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--purple-); /* Purple fill */
+  border-radius: 50%;
+}
+label {
+  display: flex;
+  align-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.radio-label {
+  font-weight: 500;
+  color: var(--black);
+}
+input[type="submit"] {
+  background-color: var(--purple-); /* If you’re using a CSS variable */
+  color: white;                     /* Makes the text readable */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+footer{
+	background-color: var(--lt-gray);
+}
+footer p, a{
+	display: flex;
+	align-items: center;
+	padding: 10px;
+}
+/*small screen*/
+@media (max-width: 600px) {
+
+main{
+    display: grid; 
+	grid-template-columns: 1fr;     
+
+}
+
+img{
+
+	max-width: 600px;
+} 
+}
+@media screen and (min-width: 920px){
+	main{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	
+	}
+
+}
+@media screen and (min-width: 1200px){
+	main{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
 }
