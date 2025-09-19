@@ -238,13 +238,57 @@ h3 span{
 	
 
 }
-label{
+label, legend{
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 30px;
 }
-label span{
+.required, .radio-input{
 	color: var(--purple-);
+}
+input{
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 4px;
+	border: solid 2px var(--purple-);
+	width: 250px;
+}
+
+.radio-control {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--purple-); 
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
 }
 
 
+input[type="radio"]:checked + .radio-control::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--purple-); 
+  border-radius: 50%;
+}
+.radio-input input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+.custom-select select {
+  border: 2px solid var(--purple-); 
+  border-radius: 5px;   
+  padding: 10px;            
+  font-size: 16px;      
+  background-color: var(--white);    
+  color: var(--black);            
+}
+label{
+	line-height: 2;
+}
