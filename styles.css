@@ -4,6 +4,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -50,7 +51,6 @@ table {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
 	--dk-gray: #222222;
@@ -302,12 +302,12 @@ h3{
 h3 span{
 	font-family: Montserrant;
 	font-size: 36px;
-	
+}	
 #contact {
 	display: inline-block;
 	margin-left: 40px;
 }
-}
+
 label, legend{
 	text-transform: uppercase;
 	font-weight: bold;
